@@ -11,9 +11,6 @@ The Image Surprise Analyzer operates as a multi-stage pipeline to detect surpris
 
 The system is a pipeline that integrates multiple models.
 1. **LLM Analysis:** An image is input and given to the LLM. This LLM identifies the image's surprisingness, assigns a surprise level (1-5), and provides a textual explanation of what's expected versus unexpected.
-2. **Object Detection:** If deemed surprising, the identified surprising element serves as a prompt for the `owlv2-base-patch16` object detection model. This returns a bounding box around the element in the image.
-3. **Segmentation:** The bounding box from the detection model is used as a prompt to the `sam-vit-base` model for detailed segmentation. The model outputs a mask accurately outlining the surprising element.
-4. **Overlay and Output:** The segmentation mask and bounding box are overlaid onto the original image, and shown with the analysis text. The resulting image and text are presented through the Gradio interface.
 
     *   **Prompt:**
         ```
@@ -30,6 +27,11 @@ The system is a pipeline that integrates multiple models.
            "unexpected": "[one sentence about what is unexpected]"
         }
         ```
+        
+3. **Object Detection:** If deemed surprising, the identified surprising element serves as a prompt for the `owlv2-base-patch16` object detection model. This returns a bounding box around the element in the image.
+4. **Segmentation:** The bounding box from the detection model is used as a prompt to the `sam-vit-base` model for detailed segmentation. The model outputs a mask accurately outlining the surprising element.
+5. **Overlay and Output:** The segmentation mask and bounding box are overlaid onto the original image, and shown with the analysis text. The resulting image and text are presented through the Gradio interface.
+
         
 ## Evaluation
 
