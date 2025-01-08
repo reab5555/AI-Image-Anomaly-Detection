@@ -1,0 +1,10 @@
+torch
+pillow
+requests
+openai
+transformers
+matplotlib
+numpy
+gradio
+python-dotenv
+scipy
