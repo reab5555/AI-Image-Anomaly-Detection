@@ -14,11 +14,11 @@ The system operates as a pipeline, integrating multiple models to achieve its ob
 
 The performance of different models was assessed for identifying surprising vs. non-surprising images. The following table shows some results:
 
-| Model                                                 | Set-Split | Accuracy | Surprising | Not-Surprising |
+| Model                                                 | Temperature | Accuracy | Surprising | Not-Surprising |
 |-------------------------------------------------------|----------|----------|------------|----------------|
-| `GPT-4o-mini` (temp=0.1)                              | all      | 0.84     | 0.79       | 0.9            |
-| `GPT-4o` (temp=0.1)                                     | all      | 0.789855 | 0.74       | 0.85           |
-| `Llama-3.2-11B-Vision` (temp=0.1)                             | all      | 0.62     | 0.83       | 0.57           |
+| `GPT-4o-mini                            | 0.1      | 0.84     | 0.79       | 0.9            |
+| `GPT-4o`                                  | 0.1      | 0.789855 | 0.74       | 0.85           |
+| `Llama-3.2-11B-Vision`                           | 0.1      | 0.62     | 0.83       | 0.57           |
 
 These results demonstrate the effectiveness of the different models, with `gpt-4o-mini` demonstrating the best overall performance for determining the image's surprisingness. Other models can be integrated into the pipeline to improve results.
 
