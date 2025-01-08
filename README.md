@@ -12,14 +12,14 @@ The system operates as a pipeline, integrating multiple models to achieve its ob
 
 ## Evaluation
 
+To evaluate the performance of our different LLMs in identifying surprising images, a study was conducted. First, a set of images was created, which contained examples of surprising images and non-surprising images. Then, human labelers independently reviewed each image and determined whether it was surprising or not, and the degree of surprise on a likert scale from 1 to 5. This created a ground truth consensus for each image, allowing us to measure the models' performance.
+
 The performance of different models was assessed for identifying surprising vs. non-surprising images. The following table shows some results:
 
 | Model                                                 | Temperature | Accuracy | Surprising | Not-Surprising |
 |-------------------------------------------------------|----------|----------|------------|----------------|
-| `GPT-4o-mini                            | 0.1      | 0.84     | 0.79       | 0.9            |
+| `GPT-4o-mini`                            | 0.1      | 0.84     | 0.79       | 0.9            |
 | `GPT-4o`                                  | 0.1      | 0.789855 | 0.74       | 0.85           |
 | `Llama-3.2-11B-Vision`                           | 0.1      | 0.62     | 0.83       | 0.57           |
-
-These results demonstrate the effectiveness of the different models, with `gpt-4o-mini` demonstrating the best overall performance for determining the image's surprisingness. Other models can be integrated into the pipeline to improve results.
 
 This project is still under development, but contributions are welcomed to help improve its performance and capabilities.
