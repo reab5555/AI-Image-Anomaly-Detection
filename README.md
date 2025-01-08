@@ -15,7 +15,7 @@ The system is a pipeline that integrates multiple models.
 3. **Segmentation:** The bounding box from the detection model is used as a prompt to the `sam-vit-base` model for detailed segmentation. The model outputs a mask accurately outlining the surprising element.
 4. **Overlay and Output:** The segmentation mask and bounding box are overlaid onto the original image, and shown with the analysis text. The resulting image and text are presented through the Gradio interface.
 
-    *   **Prompt:**
+**Prompt:**
         ```
         Your task is to determine if the image is surprising or not surprising.
         If the image is surprising, determine which element, figure, or object in the image is making the image surprising and write it only in one sentence with no more than 6 words, otherwise, write 'NA'.
