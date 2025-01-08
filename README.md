@@ -16,9 +16,9 @@ The performance of different models was assessed for identifying surprising vs. 
 
 | Model                                                 | Set-Split | Accuracy | Surprising | Not-Surprising |
 |-------------------------------------------------------|----------|----------|------------|----------------|
-| `gpt-4o-mini` (temp=0.1)                              | all      | 0.84     | 0.79       | 0.9            |
-| `gpt-4o` (temp=0.1)                                     | all      | 0.789855 | 0.74       | 0.85           |
-| `llama_32_11b` (temp=0.1)                             | all      | 0.62     | 0.83       | 0.57           |
+| `GPT-4o-mini` (temp=0.1)                              | all      | 0.84     | 0.79       | 0.9            |
+| `GPT-4o` (temp=0.1)                                     | all      | 0.789855 | 0.74       | 0.85           |
+| `Llama-3.2-11B-Vision` (temp=0.1)                             | all      | 0.62     | 0.83       | 0.57           |
 
 These results demonstrate the effectiveness of the different models, with `gpt-4o-mini` demonstrating the best overall performance for determining the image's surprisingness. Other models can be integrated into the pipeline to improve results.
 
