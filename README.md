@@ -1,6 +1,6 @@
 <img src="appendix/icon.webp" width="100" alt="alt text">
 
-# Image Surprise Analyzer
+# Image Anomaly-Surprise Detection
 
 This project offers a tool that identifies surprising elements in images, pinpointing what violates our expectations. It analyzes images for unexpected objects, locations, social scenarios, settings, and roles.
 
