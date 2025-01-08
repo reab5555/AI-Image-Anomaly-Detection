@@ -10,11 +10,27 @@ The Image Surprise Analyzer operates as a multi-stage pipeline to detect surpris
 ## Technical Details
 
 The system is a pipeline that integrates multiple models.
-1. **LLM Analysis:** An image is input and given to the `gpt-4o-mini` LLM. This LLM identifies the image's surprisingness, assigns a surprise level (1-5), and provides a textual explanation of what's expected versus unexpected.
+1. **LLM Analysis:** An image is input and given to the LLM. This LLM identifies the image's surprisingness, assigns a surprise level (1-5), and provides a textual explanation of what's expected versus unexpected.
 2. **Object Detection:** If deemed surprising, the identified surprising element serves as a prompt for the `owlv2-base-patch16` object detection model. This returns a bounding box around the element in the image.
 3. **Segmentation:** The bounding box from the detection model is used as a prompt to the `sam-vit-base` model for detailed segmentation. The model outputs a mask accurately outlining the surprising element.
 4. **Overlay and Output:** The segmentation mask and bounding box are overlaid onto the original image, and shown with the analysis text. The resulting image and text are presented through the Gradio interface.
 
+    *   **Prompt:**
+        ```
+        Your task is to determine if the image is surprising or not surprising.
+        If the image is surprising, determine which element, figure, or object in the image is making the image surprising and write it only in one sentence with no more than 6 words, otherwise, write 'NA'.
+        Also rate how surprising the image is on a scale of 1-5, where 1 is not surprising at all and 5 is highly surprising.
+        Additionally, write one sentence about what would be expected in this scene, and one sentence about what is unexpected.
+        Provide the response as a JSON with the following structure:
+        {
+           "label": "[surprising OR not surprising]",
+           "element": "[element]",
+           "rating": [1-5],
+           "expected": "[one sentence about what would be expected]",
+           "unexpected": "[one sentence about what is unexpected]"
+        }
+        ```
+        
 ## Evaluation
 
 To evaluate the performance of our different LLMs in identifying surprising images, a study was conducted. First, a set of images was created, which contained examples of surprising images and non-surprising images (300 images per class). Then, human labelers independently reviewed each image and determined whether it was surprising or not, and the degree of surprise on a likert scale from 1 to 5. This created a ground truth consensus for each image, allowing us to measure the models' performance.
