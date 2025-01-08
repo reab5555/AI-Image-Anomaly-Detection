@@ -16,7 +16,7 @@ To evaluate the performance of our different LLMs in identifying surprising imag
 
 The performance of different models was assessed for identifying surprising vs. non-surprising images. The following table shows some of the results with the best performing models:
 
-| Model                                                 | Temperature | Accuracy | Surprising | Not-Surprising |
+| Model                                                 | Temperature | Accuracy | Surprising (Presicion) | Not-Surprising (Presicion) |
 |-------------------------------------------------------|----------|----------|------------|----------------|
 | `GPT-4o-mini`                            | 0.1      | 0.84     | 0.79       | 0.9            |
 | `GPT-4o`                                  | 0.1      | 0.78 | 0.74       | 0.85           |
