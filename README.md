@@ -7,7 +7,7 @@ This project offers a tool that identifies surprising elements in images, pinpoi
 
 ## Description
 
-The Image Surprise Analyzer operates as a multi-stage pipeline to detect surprising elements in images. The process begins by feeding an input image to an LLM. The LLM analyzes the image and determines whether it contains any surprising elements. If so, it assigns a surprise level rating on a scale of 1 to 5 and provides text description of what is expected and unexpected about the scene. If the image is indeed deemed surprising, the LLM identifies and extracts the surprising element. This element then serves as a prompt to an object detection model, which locates the object in the image using bounding box. To further refine the detection, this bounding box is used as an input for the segmentation model. This model generates an accurate mask, highlighting the surprising element within the scene. Finally, the identified mask and bounding box are overlaid on the original image, and displayed alongside the text analysis provided by the LLM. 
+The Image Surprise Analyzer detects and highlights surprising elements in images through a multi-step process. First, an input image is analyzed by an LLM to identify surprising elements, assign a surprise rating (1-5), and provide a description of expected vs. unexpected features. If surprising elements are found, they are extracted and passed to an object detection model to locate them with a bounding box. This bounding box is then refined by a segmentation model to create an accurate mask. Finally, the mask and bounding box are overlaid on the original image, accompanied by the LLM's analysis.
 
 ----------------------------------------------------------------------------
 
