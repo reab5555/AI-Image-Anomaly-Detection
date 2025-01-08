@@ -375,12 +375,28 @@ def process_and_analyze(image):
         print(detailed_error)  # Debug print
         return None, f"Error processing image: {error_msg}"
 
-
 # Create Gradio interface
 def create_interface():
     with gr.Blocks() as demo:
-        gr.Markdown("# Image Surprise Analysis")
+        with gr.Row():  # Horizontal layout for the left side alignment
+            with gr.Column(scale=1):  # Adjust the scale for the left section
+                gr.Image(
+                    value="appendix/icon.webp", 
+                    width=65, 
+                    interactive=False, 
+                    show_label=False,
+                    show_download_button=False,
+                    elem_id="icon"
+                )
+                with gr.Column(scale=3):
+                    gr.Markdown("## Image Anomaly-Surprise Detection")
 
+        gr.Markdown(
+            "This project offers a tool that identifies surprising elements in images, "
+            "pinpointing what violates our expectations. It analyzes images for unexpected objects, "
+            "locations, social scenarios, settings, and roles."
+        )
+ 
         with gr.Row():
             with gr.Column():
                 input_image = gr.Image(label="Upload Image")
@@ -396,7 +412,19 @@ def create_interface():
             outputs=[output_image, output_text]
         )
 
+           
+        # Display example images in a row using Gradio Image components
+        with gr.Row():
+            gr.Image(value="appendix/gradio_example.png", width=250, show_label=False, interactive=False, show_download_button=False)
+            gr.Image(value="appendix/gradio_example2.png", width=250, show_label=False, interactive=False, show_download_button=False)
+            gr.Image(value="appendix/gradio_example3.png", width=250, show_label=False, interactive=False, show_download_button=False)
+            gr.Image(value="appendix/gradio_example4.png", width=250, show_label=False, interactive=False, show_download_button=False)
+
+    
     return demo
+
+
+
 
 
 if __name__ == "__main__":
