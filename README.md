@@ -19,7 +19,7 @@ The performance of different models was assessed for identifying surprising vs. 
 | Model                                                 | Temperature | Accuracy | Surprising | Not-Surprising |
 |-------------------------------------------------------|----------|----------|------------|----------------|
 | `GPT-4o-mini`                            | 0.1      | 0.84     | 0.79       | 0.9            |
-| `GPT-4o`                                  | 0.1      | 0.789855 | 0.74       | 0.85           |
+| `GPT-4o`                                  | 0.1      | 0.78 | 0.74       | 0.85           |
 | `Llama-3.2-11B-Vision`                           | 0.1      | 0.62     | 0.83       | 0.57           |
 
 This project is still under development, but contributions are welcomed to help improve its performance and capabilities.
