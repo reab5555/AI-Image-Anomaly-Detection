@@ -11,7 +11,7 @@ The Image Surprise Analyzer operates as a multi-stage pipeline to detect surpris
 
 ----------------------------------------------------------------------------
 
-<img src="appendix/gradio_example.png" width="400" alt="alt text">
+<img src="appendix/gradio_example.png" width="500" alt="alt text">
 
 ## Technical Details
 
