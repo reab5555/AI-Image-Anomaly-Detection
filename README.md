@@ -11,7 +11,15 @@ The Image Surprise Analyzer detects and highlights surprising elements in images
 
 ----------------------------------------------------------------------------
 
-<img src="appendix/gradio_example.png" width="500" alt="alt text">
+<table>
+  <tr>
+    <td><img src="appendix/gradio_example.png" width="250" alt="Image 1"></td>
+    <td><img src="appendix/gradio_example2.png" width="250" alt="Image 2"></td>
+    <td><img src="appendix/gradio_example3.png" width="250" alt="Image 3"></td>
+    <td><img src="appendix/gradio_example4.png" width="250" alt="Image 4"></td>
+  </tr>
+</table>
+
 
 ## Technical Details
 
